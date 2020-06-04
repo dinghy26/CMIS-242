@@ -21,7 +21,12 @@ public class ThrowThrows {
         m();
     }
 
-    public void p() throws IOException {
+    /** in this method is a try and catch but because
+    throws IOExeption is indicated is not the job of this method
+    to handle the exception. Also multipleerrors can be point out 
+    but only one will be handle.
+    */
+    public void p() throws IOException, SQLDataException {
         try{
             n();
         } catch(IOException e) {

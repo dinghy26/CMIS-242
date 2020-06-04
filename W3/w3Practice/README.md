@@ -2,7 +2,6 @@
 
 **Abstract class and Interfaces**
 
-
 Abstract class = `public abstract class` can have members variable that cand be inhrited.
 can have cunstructor and methods can be `public`, `private` etc.
 An abstract class is a class that is declared abstract—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
@@ -23,10 +22,7 @@ You want to specify the behavior of a particular data type, but not concerned ab
 You want to take advantage of multiple inheritance of type.
 
 **Quiz 2 Points**
+
 `throw` = use for creating an exception explicitly whatever i want.
 
-![throwEX.PNG](:/832094b4a3cb4f49a06deee5ad7511be)
-
 `throws` = the code can have some Exceptions but it dose not handel the exception. if a declare a method `throws IOExeptions` even if is a try and catch method inside the method is not the job of that try and catch to handle that exception.
-
-![throwsEX.PNG](:/a24862ac72254b1eb1ce8ebc3f05f4e6)

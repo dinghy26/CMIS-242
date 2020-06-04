@@ -21,3 +21,12 @@ Consider using interfaces if any of these statements apply to your situation:
 You expect that unrelated classes would implement your interface. For example, the interfaces Comparable and Cloneable are implemented by many unrelated classes.
 You want to specify the behavior of a particular data type, but not concerned about who implements its behavior.
 You want to take advantage of multiple inheritance of type.
+
+**Quiz 2 Points**
+`throw` = use for creating an exception explicitly whatever i want.
+
+![throwEX.PNG](:/832094b4a3cb4f49a06deee5ad7511be)
+
+`throws` = the code can have some Exceptions but it dose not handel the exception. if a declare a method `throws IOExeptions` even if is a try and catch method inside the method is not the job of that try and catch to handle that exception.
+
+![throwsEX.PNG](:/a24862ac72254b1eb1ce8ebc3f05f4e6)

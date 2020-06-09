@@ -1,4 +1,5 @@
-import java.io.IOException;
+import java.io.*;
+import java.sql.*;
 
 public class ThrowThrows {
 
@@ -41,7 +42,7 @@ public class ThrowThrows {
         
         try {
             obj.p();
-        } catch (IOException e) {
+        } catch (Exception e) {
             //TODO: handle exception
         }
         System.out.println("Normal Flow");

@@ -2,7 +2,7 @@
 * File: Project2.java
  * Author: Brian Miranda Perez
  * Date: June 10, 2020
- * this class contains the main and static methods
+ * this class contains the main and GUI
  * for project 2.
  * */
 import java.awt.*;
@@ -33,7 +33,7 @@ public class Project2 implements ActionListener {
     private static JTextField appTextMPG = new JTextField("");
     private static JTextField appTextWeight = new JTextField("");
     private static JTextField appTextSalesTax = new JTextField("");
-    private static ArrayList<Automoblile> autostore = new ArrayList<>(5);
+    private static ArrayList<Automobile> autostore = new ArrayList<>(5);
 
     // methid to get make and model
     public static String getMake() {
@@ -51,6 +51,7 @@ public class Project2 implements ActionListener {
         return Integer.parseInt(appTextMPG.getText());
     }
 
+    // Method to get weight
     public int getWeight() {
         return Integer.parseInt(appTextWeight.getText());
     }
@@ -65,8 +66,8 @@ public class Project2 implements ActionListener {
         appTextWeight.setText("");
     }
 
-    // Method to add every entry to autostore arayList
-    public void store(Automoblile test) {
+    // Method to add every entry to autostore arrayList
+    public void store(Automobile test) {
         autostore.add(test);
     }
 
@@ -111,7 +112,7 @@ public class Project2 implements ActionListener {
         bg.add(appRadioElectric);
         bg.add(appRadioOther);
 
-        // Lower panel that holds all the buttons and the taxt output field
+        // Lower panel that holds all the buttons and the tax output field
         appPanelLower.setLayout(new GridLayout(2, 2, 5, 5));
         appPanelLower.setBorder(BorderFactory.createEmptyBorder(8, 30, 0, 30));
         appPanelLower.add(compSalesTax);
@@ -141,7 +142,7 @@ public class Project2 implements ActionListener {
         try {
 
             if (appRadioHybrid.isSelected()) {
-                Automoblile selectHybrid = new Hybrid(getMake(), getPrice(), getMPG());
+                Automobile selectHybrid = new Hybrid(getMake(), getPrice(), getMPG());
                 if (e.getSource() == compSalesTax) {
                     appTextSalesTax.setText(String.valueOf(selectHybrid.salesTax()));
                     store(selectHybrid);
@@ -153,7 +154,7 @@ public class Project2 implements ActionListener {
             }
 
             if (appRadioElectric.isSelected()) {
-                Automoblile selectElectric = new Electric(getMake(), getPrice(), getWeight());
+                Automobile selectElectric = new Electric(getMake(), getPrice(), getWeight());
                 if (e.getSource() == compSalesTax) {
                     appTextSalesTax.setText(String.valueOf(selectElectric.salesTax()));
                     store(selectElectric);
@@ -165,7 +166,7 @@ public class Project2 implements ActionListener {
             }
 
             if (appRadioOther.isSelected()) {
-                Automoblile selectOther = new Automoblile(getMake(), getPrice());
+                Automobile selectOther = new Automobile(getMake(), getPrice());
                 if (e.getSource() == compSalesTax) {
                     appTextSalesTax.setText(String.valueOf(selectOther.salesTax()));
                     store(selectOther);
@@ -175,7 +176,7 @@ public class Project2 implements ActionListener {
             }
 
             if (e.getSource() == dysplayReports) {
-                for (Automoblile auto : autostore) {
+                for (Automobile auto : autostore) {
                     System.out.println("---------------------");
                     System.out.println(auto.toString() + "\n");
 

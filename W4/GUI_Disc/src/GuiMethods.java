@@ -18,6 +18,7 @@ public class GuiMethods extends JPanel {
     private JTextField outputOut = new JTextField("");
     private JButton result = new JButton("Result");
 
+    // methods to get the values from the text fields
     public String getFullName() {
         return fNameIn.getText() + " " + lNameIn.getText(); 
     }
@@ -30,6 +31,7 @@ public class GuiMethods extends JPanel {
         return Integer.parseInt(value2In.getText());
     }
 
+    // Method to set the final values  
     public void setResultlbl(String lable) {
         output.setText(lable);
     }
